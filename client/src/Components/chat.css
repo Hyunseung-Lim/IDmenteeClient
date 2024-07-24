@@ -1,0 +1,151 @@
+.chatUI {
+    position: relative;
+    background-color: #ECF0F6;
+    height: calc(100vh - 48px);
+    /* margin-left: 10px; */
+    width: 600px;
+    flex: 1 1 500px;
+}
+
+.chatUI::-webkit-scrollbar {
+    display: none; /* 스크롤바를 숨김 */
+}
+
+.chatUI > .bottombar {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 88%;
+    height: auto;
+    max-height: 120px;
+    /* height: 30px; */
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 1000; 
+    background-color: white;
+    border-radius: 6px;
+    border: solid 1px #ddd;
+    padding: 5px 8px 4px 12px;
+}
+
+.chatUI > .bottombar > textarea {
+    border: none;
+    width: 90%;
+    min-height: 14px;
+    overflow-y: auto;
+    font-size: 14px;
+    font-weight: 500;
+    resize: none;
+}
+
+.chatUI > .bottombar > .chatBtn {
+    width: 30px;
+    height: 30px;
+}
+
+.chatUI > .disabled {
+    background-color: #eee;
+}
+
+.chatWindow{
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 0 20px 0 10px;
+}
+
+.chatWindow::-webkit-scrollbar {
+    display: none; /* 스크롤바를 숨김 */
+}
+
+.chatContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 100%;
+    max-height: 100%;
+    /* width: 100%; */
+    padding: 30px 0 76px;
+}
+
+.chatContainer::-webkit-scrollbar {
+    display: none; /* 스크롤바를 숨김 */
+}
+
+.studentchatHolder {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 100%;
+    /* width: 100%; */
+    word-wrap: break-word;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.studentchatHolder > img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.studentchatHolder > .studentchat {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.studentchatHolder > .studentchat > .studentName {
+    font-size: 12px;
+    font-weight: 600;
+    padding-left: 4px;
+    padding-bottom: 2px;
+}
+
+.studentchatHolder > .studentchat > .chatbubble {
+    background-color: white;
+    border-radius: 10px;
+    max-width: 100%;
+    padding: 2px 14px;
+}
+
+.studentchatHolder > .studentchat > .typingbubble {
+    background-color: white;
+    border-radius: 10px;
+    max-width: 100%;
+    padding: 14px;
+}
+
+.instructorchatHolder {
+    text-align: left;
+    max-width: 100%;
+}
+
+.instructorchatHolder > .userName {
+    font-size: 12px;
+    font-weight: 600;
+    padding-left: 4px;
+    padding-bottom: 2px;
+}
+
+.instructorchat {
+    max-width: 100%;
+    /* width: 100%; */
+    display: flex;
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 24px;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: left;
+    background-color: #D1D3E3;
+}

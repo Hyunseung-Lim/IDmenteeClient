@@ -1,0 +1,190 @@
+.studentUI {
+    flex-shrink: 0;
+	width: 250px;
+    background-color: white;
+    flex-grow: 1;
+}
+
+.studentUI > .topbar {
+    display: flex;
+    width: calc(100% - 40px);
+    padding: 10px 20px;
+    flex-direction: row;
+    justify-content: left;
+    font-weight: 700;
+    border: 0;
+}
+
+.studentUI > .topbar > img {
+    margin-right: 12px;
+}
+
+
+.studentProfile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f9fd;
+    width: 90%;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.studentProfile > .title {
+    width: 100%;
+    font-weight: 800;
+    text-align: left;
+    margin: 16px 0 2px 40px;
+    font-size: 14px;
+}
+
+.studentProfile > img {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 10px;
+}
+
+.studentProfile > .name {
+    margin: 12px 0 6px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.studentProfile > .job {
+    font-weight: 600;
+    font-size: 12px;
+    color: hsl(0, 0%, 20%);
+}
+
+
+.barContainer {
+    width: 80%;
+    height: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 4px;
+}
+
+.gague {
+    height: 100%;
+    background-color: var(--theme-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* color: white; */
+    border-radius: 15px;
+    transition: width 0.3s ease-in-out;
+}
+
+.no-animation {
+    transition: none; /* This disables animation */
+}
+
+.levelContainer {
+    margin: 4px 0 14px;
+    display: flex;
+    width: 78%;
+    justify-content:space-between;
+}
+
+.levelContainer > .level {
+    font-weight: 700;
+    color: var(--theme-color);
+    font-size: 15px;
+}
+
+.levelContainer > .exp {
+    font-size: 12px;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.buttonContainer > .userBtn {
+    border: 0;
+    background-color: white;
+    width: 45%;
+    height: 32px;
+    border-radius: 8px 8px 0 0;
+    font-weight: 800;
+    padding-top: 2px;
+}
+
+.buttonContainer > .clicked {
+    color: var(--theme-color);
+    background-color: #f4f9fd;
+}
+
+.buttonContainer > .userBtn:hover {
+    background-color: #E8EDF1;
+}
+
+.userStatus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f9fd;
+    height: 480px;
+    width: 90%;
+    margin: auto;
+    border-radius: 0 0 10px 10px;
+}
+
+.userStatus > .feedback {
+    width: 90%;
+}
+
+.userStatus > .feedback > .bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.barPointer {
+    transition: x 0.3s;
+}
+
+.userStatus > .userProfileContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 24px 20px;
+}
+
+.userProfileContainer > img {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    margin: 0 20px;
+}
+
+.userGoals {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 20px;
+    min-width: 80%;
+    font-size: 14px;
+}
+
+.userGoals > .goal {
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    border: solid 1px #ddd;
+    padding: 6px;
+    margin-top: 4px;
+    margin-bottom: 14px;
+}
