@@ -41,7 +41,7 @@ export const Topbar = (props) => {
     const logout = async () => {
         axios({
           method: "POST",
-          url:"/logout",
+          url:"https://web-idmenteeclient-lywdzobf1f908180.sel4.cloudtype.app/logout",
         })
         .then((response) => {
            props.removeToken()
