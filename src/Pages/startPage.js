@@ -61,7 +61,7 @@ export const StartPage = (props) => {
         try {            
             await axios({
                 method: "POST",
-                url:"/saveSetting",
+                url:"https://port-0-idmenteeserver-lywdzobf1f908180.sel4.cloudtype.app/saveSetting",
                 headers: {
                     Authorization: 'Bearer ' + props.token
                 },
