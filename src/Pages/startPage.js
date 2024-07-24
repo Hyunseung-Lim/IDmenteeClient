@@ -20,7 +20,7 @@ export const StartPage = (props) => {
     function getSetting() {
         axios({
         method: "GET",
-        url:"/getSetting",
+        url:"https://port-0-idmenteeserver-lywdzobf1f908180.sel4.cloudtype.app/getSetting",
         headers: {
             Authorization: 'Bearer ' + props.token
         }
@@ -42,7 +42,7 @@ export const StartPage = (props) => {
             console.log(error.response.headers)
             axios({
             method: "POST",
-            url:"/logout",
+            url:"https://port-0-idmenteeserver-lywdzobf1f908180.sel4.cloudtype.app/logout",
             })
             .then((response) => {
             props.removeToken()
