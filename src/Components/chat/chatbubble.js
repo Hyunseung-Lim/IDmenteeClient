@@ -22,14 +22,13 @@ export const ChatBubble = ({speaker, content, mode}) => {
           }
       };
 
-
     return(
         <>
             {speaker === "student" ? 
                 <div className='studentchatHolder'>
-                    {mode ===1 ? <img src='images/student.png' alt='logo'/> : <img src='images/gpt.png' alt='logo'/>}
+                    <img src='images/student.png' alt='logo'/>
                     <div className='studentchat'>
-                        <div className='studentName'>{mode === 1 ? <>동건</> : <>GPT</>}</div>
+                        <div className='studentName'>동건</div>
                         <div className='chatbubble' dangerouslySetInnerHTML={createMarkup()}/>
                     </div>
                 </div>
