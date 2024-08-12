@@ -77,7 +77,7 @@ export const Topbar = (props) => {
     const finish = async () => {
         await axios({
             method: "GET",
-            url:"/nextRound",
+            url:"https://port-0-idmenteeserver-lywdzobf1f908180.sel4.cloudtype.app/nextRound",
             headers: {
                 Authorization: 'Bearer ' + props.token
             }
