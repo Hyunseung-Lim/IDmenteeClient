@@ -47,29 +47,29 @@ export const Signin = (props) => {
     <>
       <div className="signholder">
         <form className="signinbox" onSubmit={submitHander}>
-          <div className="signinTitle">IDMentee</div>
+          <div className="signinTitle">Feed-O-Meter</div>
           <input
             className="signInput"
             type="email"
             value={email}
             onChange={emailHandler}
-            placeholder={"이메일"}
+            placeholder={"email"}
           ></input>
           <input
             className="signInput"
             type="password"
             value={password}
             onChange={passwordHandler}
-            placeholder={"비밀번호"}
+            placeholder={"password"}
             autoComplete="on"
           ></input>
           <button className="loginBtn" type="submit">
-            로그인
+            Sign in
           </button>
         </form>
         <div className="createAccountbox">
-          계정이 없으신가요?
-          <button onClick={() => props.setIsSignup()}>가입하기</button>
+          No account yet?
+          <button onClick={() => props.setIsSignup()}>Sign up</button>
         </div>
       </div>
     </>
