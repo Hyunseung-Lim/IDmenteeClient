@@ -4,7 +4,7 @@ export const TypingAnimation = ({ interval = 500, isDisable ,reset }) => {
 
     const [displayText, setDisplayText] = useState('');
     const [index, setIndex] = useState(0);
-    const outputs = ['음...그게.........', '어...제..생각은........', '그건...말이죠.........'];
+    const outputs = ["Well.....It's.......", "Uh...I think..maybe........", "So, you see... the thing is....."];
 
     // Function to get a random output
     const getRandomOutput = () => {

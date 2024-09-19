@@ -43,7 +43,7 @@ export const MainPage = (props) => {
   function getData() {
     axios({
       method: "GET",
-      url: "https://port-0-idmenteeserver-lywdzobf1f908180.sel4.cloudtype.app/profile",
+      url: "/profile",
       headers: {
         Authorization: "Bearer " + props.token,
       },
@@ -84,7 +84,7 @@ export const MainPage = (props) => {
           console.log(error.response.headers);
           axios({
             method: "POST",
-            url: "https://port-0-idmenteeserver-lywdzobf1f908180.sel4.cloudtype.app/logout",
+            url: "/logout",
           })
             .then((response) => {
               props.removeToken();
@@ -103,7 +103,7 @@ export const MainPage = (props) => {
   const getResponse = (feedback) => {
     axios({
       method: "POST",
-      url: "https://port-0-idmenteeserver-lywdzobf1f908180.sel4.cloudtype.app/response",
+      url: "/response",
       headers: {
         Authorization: "Bearer " + props.token,
       },
@@ -144,7 +144,7 @@ export const MainPage = (props) => {
   const getBaselineResponse = (feedback) => {
     axios({
       method: "POST",
-      url: "https://port-0-idmenteeserver-lywdzobf1f908180.sel4.cloudtype.app/response",
+      url: "/response",
       headers: {
         Authorization: "Bearer " + props.token,
       },
@@ -170,14 +170,17 @@ export const MainPage = (props) => {
   function getQuestion() {
     axios({
       method: "GET",
-      url: "https://port-0-idmenteeserver-lywdzobf1f908180.sel4.cloudtype.app/askQuestion",
+      url: "/askQuestion",
       headers: {
         Authorization: "Bearer " + props.token,
       },
     })
       .then((response) => {
         const res = response.data;
-        setChatData([...chatData, { speaker: "student", content: res.response }]);
+        setChatData([
+          ...chatData,
+          { speaker: "student", content: res.response },
+        ]);
         setQuestionChecker(false);
       })
       .catch((error) => {
@@ -195,61 +198,61 @@ export const MainPage = (props) => {
 
   return (
     <>
-        <div className="mainpage">
-            <Topbar
-            token={props.token}
-            setToken={props.setToken}
-            removeToken={props.removeToken}
-            time={time}
+      <div className="mainpage">
+        <Topbar
+          token={props.token}
+          setToken={props.setToken}
+          removeToken={props.removeToken}
+          time={time}
+        />
+        <div className="UIContainer">
+          {/* {notesData ? <Board token={props.token} notesData={notesData}/> : <>loading</>} */}
+          {ideaData ? (
+            <IdeaContainer
+              token={props.token}
+              ideaData={ideaData}
+              isUpdateIdea={isUpdateIdea}
+              setIsUpdateIdea={setIsUpdateIdea}
+              setIdeaData={setIdeaData}
             />
-            <div className="UIContainer">
-            {/* {notesData ? <Board token={props.token} notesData={notesData}/> : <>loading</>} */}
-            {ideaData ? (
-                <IdeaContainer
+          ) : (
+            <>loading</>
+          )}
+          {chatData ? (
+            mode === 1 ? (
+              <Chat
                 token={props.token}
-                ideaData={ideaData}
+                chatData={chatData}
                 isUpdateIdea={isUpdateIdea}
-                setIsUpdateIdea={setIsUpdateIdea}
-                setIdeaData={setIdeaData}
-                />
+                questionChecker={questionChecker}
+                getResponse={(feedback) => getResponse(feedback)}
+                getQuestion={() => getQuestion()}
+              />
             ) : (
-                <>loading</>
-            )}
-            {chatData ? (
-                mode === 1 ? (
-                <Chat
-                    token={props.token}
-                    chatData={chatData}
-                    isUpdateIdea={isUpdateIdea}
-                    questionChecker={questionChecker}
-                    getResponse={(feedback) => getResponse(feedback)}
-                    getQuestion={() => getQuestion()}
-                />
-                ) : (
-                <BaselineChat
-                    token={props.token}
-                    chatData={chatData}
-                    isUpdateIdea={isUpdateIdea}
-                    getResponse={(feedback) => getBaselineResponse(feedback)}
-                />
-                )
-            ) : (
-                <>loading</>
-            )}
-            {profileData ? (
-                mode === 1 ? (
-                <Student
-                    knowledgeLevel={knowledgeLevel}
-                    profileData={profileData}
-                    feedbackData={feedbackData}
-                    face={face}
-                    thinkingContents={thinkingContents}
-                />
-                ) : null
-            ) : (
-                <>loading</>
-            )}
-            </div>
+              <BaselineChat
+                token={props.token}
+                chatData={chatData}
+                isUpdateIdea={isUpdateIdea}
+                getResponse={(feedback) => getBaselineResponse(feedback)}
+              />
+            )
+          ) : (
+            <>loading</>
+          )}
+          {profileData ? (
+            mode === 1 ? (
+              <Student
+                knowledgeLevel={knowledgeLevel}
+                profileData={profileData}
+                feedbackData={feedbackData}
+                face={face}
+                thinkingContents={thinkingContents}
+              />
+            ) : null
+          ) : (
+            <>loading</>
+          )}
+        </div>
       </div>
     </>
   );

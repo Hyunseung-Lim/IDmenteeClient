@@ -66,8 +66,8 @@
     margin: 4px;
 }
 
-.gague {
-    height: 100%;
+.gauge {
+    height: 20px;
     background-color: var(--theme-color);
     display: flex;
     align-items: center;
@@ -141,6 +141,14 @@
     padding: 12px 0;
 }
 
+.userStatus > .feedback > .title {
+    width: 100%;
+    font-weight: 800;
+    text-align: left;
+    margin: 4px 0 2px 0;
+    font-size: 14px;
+}
+
 .userStatus > .feedback > .barHolder {
     margin: 30px 0;
 }
@@ -212,4 +220,33 @@
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 15px solid #B5DFFF;
+}
+
+.pedometer-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 28px;
+  margin-top: 24px;
+}
+
+.pedometer {
+  position: relative;
+  width: 100%;
+  height: 90px;
+}
+
+.pedometer .needle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transition: transform 0.5s ease;
+}
+
+.pedometer-label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  margin-top: 5px;
+  font-size: 12px;
 }

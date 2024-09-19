@@ -27,10 +27,10 @@ export class BarChart extends Component {
 
   render() {
     const barData = {
-      labels: ["시의적절성", "목표연관성", "난이도", "구체성", "타당성", "실행가능성"],
+      labels: ["Specificity", "Justification", "Action", "Timeliness", "Goal Relevance", "Level"],
       datasets: [
         {
-          backgroundColor: ["#2D54F2", "#2D54F2", "#2D54F2", "#A4D8FF", "#A4D8FF", "#A4D8FF"],
+          backgroundColor: ["#A4D8FF", "#A4D8FF", "#A4D8FF", "#2D54F2", "#2D54F2", "#2D54F2"],
           data: this.props.evalPoint,
           borderRadius: 3, // Example of setting borderRadius for bars
         }

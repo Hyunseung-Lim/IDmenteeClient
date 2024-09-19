@@ -8,7 +8,7 @@ export const TypingBubble = ({content}) => {
             <div className='studentchatHolder'>
                 <img src='images/student.png' alt='logo'/> 
                 <div className='studentchat'>
-                    <div className='studentName'>동건</div>
+                    <div className='studentName'>Alex</div>
                     <div className='typingbubble'>
                         {content}
                     </div>
