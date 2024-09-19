@@ -94,20 +94,20 @@ export const IdeaContainer = (props) => {
           ) : (
             <div className="goalsConatiner">
               <div className="design_goal">
-                <b>Inovation:</b> 아이디어가 얼마나 혁신적인 지
+                <b>Innovation:</b> How innovative the idea is
               </div>
               <div className="design_goal">
-                <b>Elaboration:</b> 아이디어가 얼마나 정교한지
+                <b>Elaboration:</b> How well-developed the idea is
               </div>
               <div className="design_goal">
-                <b>Usability:</b> 아이디어가 얼마나 사용하기 용이한지
+                <b>Usability:</b> How easy the idea is to use
               </div>
               <div className="design_goal">
-                <b>Value:</b> 아이디어가 얼마나 사용할 가치가 있는지
+                <b>Value:</b> How valuable the idea is to use
               </div>
               <div className="design_goal">
-                <b>Social Responsiblity:</b> 아이디어가 얼마나 사회적 책임을
-                이행하는지
+                <b>Social Responsibility:</b> How socially responsible the idea
+                is
               </div>
             </div>
           )}
