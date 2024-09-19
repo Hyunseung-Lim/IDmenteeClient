@@ -19,7 +19,7 @@ export const IdeaContainer = (props) => {
     props.setIsUpdateIdea(true);
     await axios({
       method: "GET",
-      url: "https://port-0-idmenteeserver-lywdzobf1f908180.sel4.cloudtype.app/updateIdea",
+      url: "/updateIdea",
       headers: {
         Authorization: "Bearer " + props.token,
       },
@@ -80,7 +80,9 @@ export const IdeaContainer = (props) => {
             Topic
           </button>
           <button
-            className={currentDescription === 0 ? "current right Tag" : "right Tag"}
+            className={
+              currentDescription === 0 ? "current right Tag" : "right Tag"
+            }
             onClick={() => ChangeDescription(1)}
           >
             Design Goals
@@ -104,7 +106,8 @@ export const IdeaContainer = (props) => {
                 <b>Value:</b> 아이디어가 얼마나 사용할 가치가 있는지
               </div>
               <div className="design_goal">
-                <b>Social Responsiblity:</b> 아이디어가 얼마나 사회적 책임을 이행하는지
+                <b>Social Responsiblity:</b> 아이디어가 얼마나 사회적 책임을
+                이행하는지
               </div>
             </div>
           )}
@@ -114,7 +117,11 @@ export const IdeaContainer = (props) => {
             <div className="ideatitle">
               <div className="title">{idea.title}</div>
 
-              <button ref={buttonRef} onClick={updateIdea} disabled={props.isUpdateIdea}>
+              <button
+                ref={buttonRef}
+                onClick={updateIdea}
+                disabled={props.isUpdateIdea}
+              >
                 Update Idea
               </button>
               {error && (

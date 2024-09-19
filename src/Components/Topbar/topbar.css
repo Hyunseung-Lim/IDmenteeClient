@@ -44,7 +44,8 @@
 }
 
 .menu > .hamburger-bar {
-    min-width: 120px;
+    min-width: 160px;
+    width: fit-content;
     display: block;
     height: 40px;
     transition: transform 0.2s ease-out;
@@ -56,7 +57,7 @@
     border: none;
 }
 
-.menu > .hamburger-bar:hover{
+.menu > .hamburger-bar:hover {
     background-color: #eee;
     color: var(--theme-color);
 }
@@ -109,11 +110,11 @@
     position: fixed;
     flex-direction: column;
     margin-top: 46.2px;
-    width: 140px;
+    width: 200px;
     height: 100px;
     z-index: 1;
     top: 0;
-    right: 10px;
+    right: 40px;
     height: 100%;
     max-width: 100px;
     transition: 0.5s ease;
